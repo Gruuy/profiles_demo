@@ -1,0 +1,21 @@
+#yaml文件切换与properties一摸一样
+#spring:
+#  profiles:
+#    active: pro #dev
+
+#注意：ymal支持多文档块模式 例：
+#最上面为控制 每个---代表截断，为一个类别 spring.profiles为他们的名称
+spring:
+  profiles:
+    active: dev
+---
+server:
+  port: 8081
+spring:
+  profiles: dev
+
+---
+server:
+     port: 8082
+spring:
+  profiles: pro
